@@ -94,6 +94,12 @@ namespace osf
             get { return (int)M_ProcessStartInfo.WindowStyle; }
             set { M_ProcessStartInfo.WindowStyle = (System.Diagnostics.ProcessWindowStyle)value; }
         }
+
+        public string WorkingDirectory
+        {
+            get { return M_ProcessStartInfo.WorkingDirectory; }
+            set { M_ProcessStartInfo.WorkingDirectory = value; }
+        }
     }
 
     [ContextClass("КлИнформацияЗапускаПроцесса", "ClProcessStartInfo")]
@@ -169,6 +175,13 @@ namespace osf
         {
             get { return Base_obj.RedirectStandardOutput; }
             set { Base_obj.RedirectStandardOutput = value; }
+        }
+
+        [ContextProperty("РабочийКаталог", "WorkingDirectory")]
+        public string WorkingDirectory
+        {
+            get { return Base_obj.WorkingDirectory; }
+            set { Base_obj.WorkingDirectory = value; }
         }
 
         [ContextProperty("СоздатьБезОкна", "CreateNoWindow")]

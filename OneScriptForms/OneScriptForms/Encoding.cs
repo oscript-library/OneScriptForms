@@ -12,14 +12,14 @@ namespace osf
             M_Encoding = p1.M_Encoding;
         }
 
-        public Encoding(System.Text.Encoding p1)
-        {
-            M_Encoding = p1;
-        }
-
         public Encoding()
         {
             M_Encoding = System.Text.Encoding.Default;
+        }
+
+        public Encoding(System.Text.Encoding p1)
+        {
+            M_Encoding = p1;
         }
 
         public osf.Encoding ASCII

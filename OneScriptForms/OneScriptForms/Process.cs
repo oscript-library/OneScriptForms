@@ -35,6 +35,11 @@ namespace osf
             get { return M_Process.HasExited; }
         }
 
+        public int Id
+        {
+            get { return M_Process.Id; }
+        }
+
         public osf.StreamReader StandardOutput
         {
             get { return new StreamReader(M_Process.StandardOutput); }
@@ -55,11 +60,6 @@ namespace osf
         {
             M_Process.Start();
             return this;
-        }
-
-        public int Id
-        {
-            get { return M_Process.Id; }
         }
     }
 

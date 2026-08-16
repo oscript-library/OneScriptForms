@@ -48538,11 +48538,6 @@
 		|        public ClEncoding dll_obj;
 		|        public System.Text.Encoding M_Encoding;
 		|
-		|        public Encoding()
-		|        {
-		|            M_Encoding = System.Text.Encoding.Default;
-		|        }
-		|
 		|        private Encoding(osf.Encoding p1)
 		|        {
 		|            M_Encoding = p1.M_Encoding;
@@ -48551,6 +48546,11 @@
 		|        public Encoding(System.Text.Encoding p1)
 		|        {
 		|            M_Encoding = p1;
+		|        }
+		|
+		|        public Encoding()
+		|        {
+		|            M_Encoding = System.Text.Encoding.Default;
 		|        }
 		|
 		|        public osf.Encoding GetEncoding(int p1)
@@ -50847,6 +50847,12 @@
 		|        {
 		|            get { return (int)M_ProcessStartInfo.WindowStyle; }
 		|            set { M_ProcessStartInfo.WindowStyle = (System.Diagnostics.ProcessWindowStyle)value; }
+		|        }
+		|
+		|        public string WorkingDirectory
+		|        {
+		|            get { return M_ProcessStartInfo.WorkingDirectory; }
+		|            set { M_ProcessStartInfo.WorkingDirectory = value; }
 		|        }
 		|    }//endClass
 		|}//endnamespace
